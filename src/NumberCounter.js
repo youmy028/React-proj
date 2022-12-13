@@ -3,23 +3,18 @@ import React, { useState } from "react";
 function NumberCounter() {
     const [num, setNum] = useState(0);
     
-    const numIsEvenDiv =
-        num % 2 == 0 ?(
+    const numIsEvenDiv =(
             <>
-            <hr/>
-            <span>짝수입니다.</span>
+                <hr/>{num % 2 ==0 ? <div>짝수입니다.</div>: <div>홀수입니다.</div>}
             </>
-        ) : (
-            <></>
         );
     
-    const numIs8MultipleDiv = num% 8 == 0 &&(
+    const numIs8MultipleDiv = num% 8 == 0 ||(
         <>
             <hr/>
-            <span>8의 배수입니다.</span>
+            <span>8의 배수 아닙니다.</span>
         </>
     );
-    console.log('numIs8MultipleDiv : ${numIs8MultipleDiv}');   
   
     return (
         <>
