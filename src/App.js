@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import stopWatch from './stopWatch';
+import StopWatch from './stopWatch';
 function App() {
   return (
     <>
-      <stopWatch/>
+      <StopWatch/>
     </>
   );
 }
