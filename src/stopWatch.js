@@ -7,12 +7,17 @@ function StopWatch(){
     const pause = () =>{
         clearTimeout(timeOutId);
     };
+    const resume =() =>{
+        setTimeout(() => setNum(num + 1),1000);
+    };
 
     return(
      <>
         숫자: {num}
         <hr/>
         <button onClick={pause}>일시정지</button>
+        <hr/>
+        <button onClick={resume}>재개</button>
      </>
     );
 }
